@@ -105,9 +105,6 @@ def combine_annotations(list_of_annotation_paths, save_annotation_as, info_descr
                         ann["category_id"] = catname_catid_map[ann_catname]
                         annotation_id_record.append(new_annot)
                     update_list.append(ann)
-                # if update_list:
-                #     for ann in update_list:
-                #         merged_coco["annotations"].append(ann)
                 merged_coco["annotations"].extend(update_list)
     with open(save_annotation_as, "w") as f:
         json.dump(merged_coco, f)
