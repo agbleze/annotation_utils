@@ -17,7 +17,6 @@ def combine_data(img_dir_list, coco_ann_filepath_list,
     for img in all_imgs_path:
         shutil.copy(img, save_img_dir_as)
         
-    # combine annotations
     combined_ann = combine_annotations(list_of_annotation_paths=coco_ann_filepath_list,
                                         save_annotation_as=save_combined_coco_ann_as,
                                         info_description="Coco annotations"
